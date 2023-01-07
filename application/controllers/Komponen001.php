@@ -36,33 +36,33 @@ class Komponen001 extends CI_Controller
         redirect('komponen001');
     } 
 
-	public function c_edit($id = null)
+	public function c_edit($id_komponen = null)
 	{
-		$query = $this->komponen001->get($id);
+		$query = $this->komponen001->get($id_komponen);
 		$data = array(
-				'edit' => $query->row()
+				'vdata' => $query->row()
 			);
 		$this->load->view('v_edit001', $data);
 
         }
 
-        public function update() {
-            $id_komponen	= $this->request->getPost('id_komponen');
-            $merek_001	    = $this->request->getPost('merek');
-            $kapasitas_001	= $this->request->getPost('kapasitas');
-            $harga_001		= $this->request->getPost('harga');
-            $jenis_001		= $this->request->getPost('jenis');
+        public function update() 
+        {
+            $id_komponen	= $this->input->post('id_komponen');
+            $merek_001	    = $this->input->post('merek');
+            $kapasitas_001	= $this->input->post('kapasitas');
+            $harga_001		= $this->input->post('harga');
+            $jenis_001		= $this->input->post('jenis');
             
             $data = [
-                'id_komponen'	=> $id_komponen,
                 'merek_001'		=> $merek_001,
                 'kapasitas_001'	=> $kapasitas_001,
                 'harga_001'		=> $harga_001,
                 'jenis_001'		=> $jenis_001
             ];
     
-             $this->mkomponen001->update($id_komponen, $data);
-            
+             $this->MKomponen001->update($id_komponen, $data);
+            redirect('komponen001');
         }
         
 }

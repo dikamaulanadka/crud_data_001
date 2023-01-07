@@ -21,23 +21,23 @@
 
                                                 <!-- form action = namacontroller/namafungsi -->
                 <form action="<?= base_url('index.php/Komponen001/update') ?>" method="post">
-                <input type="hidden" name="id_komponen" value="<?=$edit->id_komponen?>">
+                <input type="hidden" name="id_komponen" value="<?=$vdata->id_komponen?>">
                     <div class="form-group row pt-3">
                         <label for="merek" class="col-sm-2 col-form-label">MEREK</label>
                         <div class="col-sm-10">
-                            <input type="text" name="merek" class="form-control" id="merek" value="<?=$edit->merek_001?>" >
+                            <input type="text" name="merek" class="form-control" id="merek" value="<?=$vdata->merek_001?>" >
                         </div>
                     </div>
                     <div class="form-group row pt-3">
                         <label for="kapasitas" class="col-sm-2 col-form-label">KAPASITAS</label>
                         <div class="col-sm-10">
-                            <input type="text" name="kapasitas" class="form-control" id="kapasitas" value="<?= $edit->kapasitas_001 ?>">
+                            <input type="text" name="kapasitas" class="form-control" id="kapasitas" value="<?= $vdata->kapasitas_001 ?>">
                         </div>
                     </div>
                     <div class="form-group row pt-3">
                         <label for="harga" class="col-sm-2 col-form-label">HARGA</label>
                         <div class="col-sm-10">
-                            <input type="text" name="harga" class="form-control" id="harga" value="<?= $edit->harga_001 ?>">
+                            <input type="text" name="harga" class="form-control" id="harga" value="<?= $vdata->harga_001 ?>">
                         </div>
                     </div>
                     <div class="form-group row pt-3 ">

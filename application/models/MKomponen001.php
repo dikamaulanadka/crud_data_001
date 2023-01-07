@@ -39,14 +39,14 @@ class MKomponen001 extends CI_Model
 		$this->db->where('id_komponen', $id);
 		$this->db->delete('komponen_001');
 	}
-
+    
     public function update($id_komponen, $data) {
-		return $this->db
-                        ->table('komponen_001')
-                        ->where(["id_komponen" => $id_komponen])
-                        ->set($data)
-                        ->update();
+        
+        
+      $this->db->where(['id_komponen' => $id_komponen]);
+      $this->db->update('komponen_001',$data);
+                   
 	}
-
+   
     
 }
